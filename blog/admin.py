@@ -7,7 +7,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 class PostAdmin(admin.ModelAdmin):
     readonly_fields = ('created', 'updated')
-    list_display = ('post_categories','title', 'author', 'published')
+    list_display = ('title','post_categories', 'author', 'published')
     ordering = ('author', 'published')
     search_fields = ('title', 'author__username', 'categories__name')
     date_hierarchy = 'published'
